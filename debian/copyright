@@ -1,0 +1,5 @@
+Format: http://dep.debian.net/deps/dep5
+Upstream-Contact: Lorenzo Dieryckx <lorenzo.dieryckx@gmail.com>
+Source: https://github.com/lordldx/openmediavault-dropbox
+Copyright: 2013 Lorenzo Dieryckx <lorenzo.dieryckx@gmail.com>
+License: GPL-3
