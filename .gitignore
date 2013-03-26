@@ -10,3 +10,10 @@ Desktop.ini
 
 #Translations
 *.mo
+
+
+# dpkg-buildpackage output
+*.deb
+debian/openmediavault-dropbox
+debian/files
+debian/openmediavault-dropbox.*

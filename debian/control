@@ -1,20 +1,7 @@
 Source: openmediavault-dropbox
-Section: misc
-Priority: optional
 Maintainer: Lorenzo Dieryckx <lorenzo.dieryckx@gmail.com>
-Build-depends: debhelper (>= 7 )
-Standards-Version: 3.6.10
-Homepage: http://github.com/lordldx/openmediavault-dropbox
+Standards-Version: 3.9.2
 
 Package: openmediavault-dropbox
-Architecture: all
-Depends: openmediavault (>= 0.4)
-Description: OpenMediaVault Dropbox plugin
- Dropbox is a personal cloud storage service (sometimes referred to as an online backup
- service) that is frequently used for file sharing and collaboration.
- .
- The Dropbox deamon synchronizes a local folder on your server with your dropbox account.
- .
- The OpenMediaVault-Dropbox plugin allows you to configure this through the OpenMediaVault WebGUI.
- You can select a shared folder which will then be used by the Dropbox deamon
- to synchronize with your dropbox account
+Architecture: any
+Depends: openmediavault
