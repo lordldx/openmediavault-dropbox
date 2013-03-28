@@ -1,7 +1,12 @@
 Source: openmediavault-dropbox
+Section: net
+Priority: optional
 Maintainer: Lorenzo Dieryckx <lorenzo.dieryckx@gmail.com>
-Standards-Version: 3.9.2
+Build-Depends-Indep: debhelper (>> 7 )
+Standards-Version: 3.6.10
 
 Package: openmediavault-dropbox
-Architecture: any
-Depends: openmediavault
+Architecture: all
+Depends: openmediavault (>= 0.4.27)
+Description: OpenMediaVault dropbox plugin
+ Log on to your dropbox account and have it synchronized with a local folder on your OpenMediaVault server

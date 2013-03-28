@@ -1,4 +1,4 @@
 openmediavault-dropbox
 ======================
 
-build with: $dpkg-buildpackage -T binary
+build with: dpkg-buildpackage -b
