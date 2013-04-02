@@ -1,0 +1,37 @@
+#!/bin/sh
+
+set -e
+
+unset USER
+
+INSTALL_SCRIPT=/usr/bin/dropbox
+
+if [ -z ${USER}]; then
+	USER=dropbox
+fi
+
+if [ -z ${GROUP}]; then
+	GROUP=dropbox
+fi
+
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
+case "$1" in
+	configure)
+		# run installer
+		python ${INSTALL_SCRIPT} install
+	;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+	# do nothing
+	;;
+
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2
+		exit 1
+	;;
+
+esac
+
+exit 0

@@ -1,0 +1,52 @@
+This package was debianized by Rian Hunter <rian@dropbox.com> on
+Thu, 31 Jan 2013 13:30:04 -0800.
+
+It was downloaded from https://www.dropbox.com/download?dl=packages/nautilus-dropbox-1.6.0.tar.bz2
+
+Upstream Authors: 
+
+    Rian Hunter <rian@dropbox.com>
+    David Euresti <david@dropbox.com>
+
+Copyright: 
+
+  Copyright 2008-2012 Dropbox, Inc.
+
+All images included in this package constitute data and are licensed under the
+Creative Commons Attribution-No Derivative Works 3.0 Unported License [1].  This
+includes the files:
+
+data/icons/hicolor/16x16/apps/dropbox.png
+data/icons/hicolor/22x22/apps/dropbox.png
+data/icons/hicolor/24x24/apps/dropbox.png
+data/icons/hicolor/32x32/apps/dropbox.png
+data/icons/hicolor/48x48/apps/dropbox.png
+data/icons/hicolor/64x64/apps/dropbox.png
+data/icons/hicolor/64x64/emblems/emblem-dropbox-syncing.png
+data/icons/hicolor/64x64/emblems/emblem-dropbox-uptodate.png
+data/icons/hicolor/64x64/emblems/emblem-dropbox-unsyncable.png
+
+[1] http://creativecommons.org/licenses/by-nd/3.0/
+
+All program source in this package is released under the terms of the
+GNU GPL version 3 below.
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL-3'.
+
+The Debian packaging is Copyright (C) 2008, Rian Hunter <rian@dropbox.com> and
+is licensed under the GPL, see above.

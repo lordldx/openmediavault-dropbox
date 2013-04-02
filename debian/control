@@ -7,6 +7,6 @@ Standards-Version: 3.6.10
 
 Package: openmediavault-dropbox
 Architecture: all
-Depends: openmediavault (>= 0.4.27)
+Depends: openmediavault (>= 0.4.27), python-gpgme (>= 0.1)
 Description: OpenMediaVault dropbox plugin
  Log on to your dropbox account and have it synchronized with a local folder on your OpenMediaVault server

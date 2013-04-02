@@ -16,4 +16,6 @@ Desktop.ini
 *.deb
 debian/openmediavault-dropbox
 debian/files
-debian/openmediavault-dropbox.*
+debian/openmediavault-dropbox.debhelper.*
+debian/openmediavault-dropbox.substvars
+build-stamp
