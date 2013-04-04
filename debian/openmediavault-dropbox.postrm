@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -e
+
+# Source openmediavault stuff
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
+# Actual postrm script
+case "$1" in
+	remove)
+		# remove the dropbox user and its home directory (if it still exists). This will also remove the .dropbox-dist installation and the dropbox group
+		if id -u dropbox >/dev/null 2>/dev/null; then
+			userdel -rf dropbox >/dev/null 2>/dev/null
+		fi
+	;;
+
+	purge)
+		# no purge commands for now
+	;;
+
+	upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+		# do nothing
+	;;
+
+	*)
+		echo "postrm called with unknown argument \`$1'" >&2
+		exit 1
+	;;
+
+esac
+
+exit 0

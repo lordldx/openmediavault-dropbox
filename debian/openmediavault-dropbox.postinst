@@ -4,8 +4,16 @@ set -e
 
 unset USER
 
-INSTALL_SCRIPT=/usr/bin/dropbox
+# Check if user and group exist and create them if necessary
+if ! id -g dropbox >/dev/null 2>/dev/null; then
+	groupadd dropbox
+fi
 
+if ! id -u dropbox >/dev/null 2>/dev/null; then
+	useradd -m -g dropbox -d /home/dropbox -s /bin/sh -p $(echo dropbox | openssl passwd -1 -stdin) dropbox
+fi
+
+# Set user and group
 if [ -z ${USER}]; then
 	USER=dropbox
 fi
@@ -14,13 +22,15 @@ if [ -z ${GROUP}]; then
 	GROUP=dropbox
 fi
 
+# Source openmediavault stuff
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
+# Actual postinst script
 case "$1" in
 	configure)
-		# run installer
-		python ${INSTALL_SCRIPT} install
+		# run installer in dropbox user's context
+		su - ${USER} -c'python /usr/bin/dropbox install'
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)
