@@ -22,7 +22,6 @@ OMV.Module.Services.dropbox = function (config) {
 Ext.extend(OMV.Module.Services.dropbox, OMV.FormPanelExt, {
 
 	initComponent:function () {
-
 		OMV.Module.Services.dropbox.superclass.initComponent.apply(this, arguments);
 	},
 
@@ -64,9 +63,8 @@ Ext.extend(OMV.Module.Services.dropbox, OMV.FormPanelExt, {
 					}
 				]
 			}
-		]
+		];
 	}
-
 });
 
 
