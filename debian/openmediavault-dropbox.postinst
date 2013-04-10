@@ -31,6 +31,19 @@ case "$1" in
 	configure)
 		# run installer in dropbox user's context
 		su - ${USER} -c'python /usr/bin/dropbox install'
+
+		# Generate config
+		if ! omv_config_exists "//services/dropbox"; then
+			omv_config_add_element "//services" "dropbox" ""
+		fi
+
+		if ! omv_config_exists "//services/dropbox/enable"; then
+			omv_config_add_element "//services/dropbox" "enable" "0"
+		fi
+
+		if ! omv_config_exists "//services/dropbox/sharedfolderref"; then
+			omv_config_add_element "//services/dropbox" "sharedfolderref" ""
+		fi
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)
