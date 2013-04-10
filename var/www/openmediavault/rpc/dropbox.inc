@@ -6,7 +6,7 @@ require_once("openmediavault/rpc.inc");
 
 class DropboxRpc extends OMVRpc {
 	
-	const xpathRoot = '//services/dropbox'
+	const xpathRoot = '//services/dropbox';
 
 	public function __construct() 
 	{
@@ -39,10 +39,10 @@ class DropboxRpc extends OMVRpc {
 		$this->commitSession();
 
 		// Get configuration object
-		$object = $xmlConfig->get($xpathRoot);
+		$object = $xmlConfig->get(self::xpathRoot);
 		if (is_null($object)) {
 			throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED,
-			  $xpathRoot);
+			  self::xpathRoot);
 		}
 
 		// Modify result data
@@ -75,7 +75,7 @@ class DropboxRpc extends OMVRpc {
 		);
 
 		// Set configuration object
-		if (FALSE === $xmlConfig->replace($xpathRoot, $object)) {
+		if (FALSE === $xmlConfig->replace(self::xpathRoot, $object)) {
 			throw new OMVException(OMVErrorMsg::E_CONFIG_SET_OBJECT_FAILED);
 		}
 
