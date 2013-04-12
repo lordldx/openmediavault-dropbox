@@ -1,2 +1,3 @@
 var/www/openmediavault/*	var/www/openmediavault
 usr/*	usr
+etc/*   etc

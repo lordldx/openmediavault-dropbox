@@ -1,0 +1,38 @@
+#!/bin/sh
+
+. /lib/lsb/init-functions
+
+start () {
+	log_daemon_msg "Starting Dropbox" "dropbox"
+	su - dropbox -c'dropbox start' 
+	log_success_msg "Dropbox started"
+}
+
+stop () {
+	log_daemon_msg "Stopping Dropbox" "dropbox"
+	su - dropbox -c'dropbox stop'
+}
+
+# main logic
+case "$1" in
+	start)
+		start
+		;;
+
+	stop)
+		stop
+		;;
+
+	status)
+		su - dropbox -c'dropbox status'
+		;;
+
+	restart|reload|condrestart)
+		stop
+		start
+		;;
+  	*)
+        echo $"Usage: $0 {start|stop|restart|reload|status}"
+        exit 1
+esac
+exit 0
