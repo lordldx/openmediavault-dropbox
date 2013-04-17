@@ -56,6 +56,23 @@ Ext.extend(OMV.Module.Services.dropbox, OMV.FormPanelExt, {
 						inputValue:1
 					},
 					{
+						xtype	  :"textfield",
+						name 	  :"login",
+						fieldLabel:_("Dropbox login"),
+						allowNone : false,
+						plugins   :[ OMV.form.plugins.FieldInfo ],
+						infoText  :_("The login that you use to log into dropbox")
+					},
+					{
+						xtype     :"textfield",
+						inputType :"password",
+						name      :"password",
+						fieldLabel:_("Dropbox password"),
+						allowNone : false,
+						plugins   :[ OMV.form.plugins.FieldInfo ],
+						infoText  :_("The password taht you use to log into dropbox")
+					},
+					{
 						xtype: "sharedfoldercombo",
 						name: "sharedfolderref",
 						hiddenName: "sharedfolderref",
