@@ -12,8 +12,9 @@ OMV.NavigationPanelMgr.registerMenu("services", "dropbox", {
  * @param config
  */
 OMV.Module.Services.dropbox = function (config) {
+	"use strict";
 	var initialConfig = {
-		rpcService  :"dropbox",
+		rpcService  :"dropbox"
 	};
 	Ext.apply(initialConfig, config);
 	OMV.Module.Services.dropbox.superclass.constructor.call(this, initialConfig);
@@ -22,22 +23,24 @@ OMV.Module.Services.dropbox = function (config) {
 Ext.extend(OMV.Module.Services.dropbox, OMV.FormPanelExt, {
 
 	initComponent:function () {
+		"use strict";
 		OMV.Module.Services.dropbox.superclass.initComponent.apply(this, arguments);
 	},
 
 	/* Overridden to refresh loaded data instead of original form fields */
 	reset        :function () {
+		"use strict";
 		this.doLoad();
 	},
 
 	/* Overridden to populate folders */
 	doSubmit     :function () {
-
+		"use strict";
 	},
 
 	getFormItems:function () {
-		return 
-		[
+		"use strict";
+		return [
 			{
 				xtype   :"fieldset",
 				title   :_("General settings"),
